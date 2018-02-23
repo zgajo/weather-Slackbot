@@ -17,6 +17,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
+// for  slack slash commands (waiting for /weather trigger)
+app.get('/', (req, res)=>{
+    res.send("Just a little bot")
+});
+
 // for  slack slash commands (waiting for /weather trigger)
 app.post('/slash_weather', SlashController);
 
