@@ -1,18 +1,5 @@
 axios = require('axios');
 
-getWeather = async function(req, res){
-
-    res.setHeader('Content-Type', 'application/json');
-
-    let err, weather;
-
-    [err, weather] = await getWeatherForCity("Rovinj");
-
-    if(err) return ReE(res, err, err.data.cod);
-    return ReS(res, weather);
-
-};
-
 getWeatherForCity = (city)=>{
 
     return axios.post(`${CONFIG.apiUrl}APPID=${CONFIG.apiKey}&units=metric&q=${city}`)

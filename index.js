@@ -1,4 +1,4 @@
-require('./config');  //instantiate global functions
+require('./config');  //instantiate global CONFIG object
 
 require('./global_functions');  //instantiate global functions
 
