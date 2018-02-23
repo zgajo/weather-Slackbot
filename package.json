@@ -1,6 +1,9 @@
 {
   "name": "",
   "version": "",
+  "scripts": {
+    "start": "node ./index.js"
+  },
   "dependencies": {
     "@slack/client": "^3.16.0",
     "axios": "^0.18.0",
