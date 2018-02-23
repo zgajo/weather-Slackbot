@@ -2,7 +2,7 @@ require('./config');  //instantiate global CONFIG object
 
 require('./global_functions');  //instantiate global functions
 
-require('./slackbot') // Bot which is connected to workspace
+require('./bot/slackbot') // Bot which is connected to workspace
 
 const bodyParser = require('body-parser');
 const express = require('express');
@@ -10,8 +10,8 @@ const logger = require('morgan');
 
 const app = new express();
 
-const SlashController = require('./slash_commands');
-const WebhooksConstroller = require('./webhooks');
+const SlashController = require('./bot/slash_commands');
+const WebhooksConstroller = require('./bot/webhooks');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
